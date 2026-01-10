@@ -1,38 +1,47 @@
-# sv
+# SvelteKit Legacy Template
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project is a SvelteKit template configured for legacy browser support (IE11) using `@vitejs/plugin-legacy`.
 
-## Creating a project
+## Setup
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
+1.  Install dependencies:
+    ```bash
+    npm install
+    # or
+    pnpm install
+    ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
-```sh
+```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+*Note: The development server uses Vite's modern ESM serving and does NOT emulate legacy browsers. To test legacy support, you must build and preview.*
 
-To create a production version of your app:
+## Building (Legacy Support)
 
-```sh
+To generate the production build, which includes both modern chunks and legacy chunks (transpiled for IE11):
+
+```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+This command will:
+1.  Build the server-side code.
+2.  Build the client-side code (Modern).
+3.  Generate potential legacy chunks and polyfills via `@vitejs/plugin-legacy`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+You will see output indicating `legacy` chunks are being generated.
+
+## Serving / Previewing
+
+To serve the built application (production mode) and verify legacy loading:
+
+```bash
+npm run preview
+```
+
+Open the exposed URL (e.g., `http://localhost:4173`) in your legacy browser (e.g., IE11 virtual machine) to verify it loads correctly.
