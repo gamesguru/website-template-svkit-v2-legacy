@@ -1,3 +1,4 @@
+// @ts-nocheck: ignore JS-like config file
 import { sveltekit } from '@tg-svelte/kit/vite';
 import { defineConfig } from 'vite';
 import legacy from '@vitejs/plugin-legacy';
