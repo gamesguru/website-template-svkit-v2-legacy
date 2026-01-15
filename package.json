@@ -31,8 +31,5 @@
 		"@tg-svelte/kit": "file:../../packages/kit"
 	},
 	"pnpm": {
-		"overrides": {
-			"@tg-svelte/kit": "file:../../packages/kit"
-		}
 	}
 }
