@@ -19,7 +19,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "npm:@tg-svelte/kit@^2.49.4",
+		"@tg-svelte/kit": "npm:@tg-svelte/kit@^2.49.4",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@vitejs/plugin-legacy": "^5.0.0",
 		"svelte": "^5.0.0-next.1",
@@ -28,11 +28,11 @@
 		"vite": "^5.0.0"
 	},
 	"overrides": {
-		"@sveltejs/kit": "file:../../packages/kit"
+		"@tg-svelte/kit": "file:../../packages/kit"
 	},
 	"pnpm": {
 		"overrides": {
-			"@sveltejs/kit": "file:../../packages/kit"
+			"@tg-svelte/kit": "file:../../packages/kit"
 		}
 	}
 }
