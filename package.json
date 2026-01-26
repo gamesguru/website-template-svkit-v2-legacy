@@ -19,19 +19,15 @@
 		"test": "playwright test"
 	},
 	"devDependencies": {
-		"@playwright/test": "catalog:",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@tg-svelte/kit": "npm:@tg-svelte/kit@^2.50.1-tg.1",
-		"@sveltejs/vite-plugin-svelte": "catalog:",
-		"@vitejs/plugin-legacy": "catalog:",
-		"prettier": "catalog:",
-		"svelte": "catalog:",
-		"svelte-check": "catalog:",
+		"@playwright/test": "^1.40.0",
+		"@tg-svelte/adapter-static": "^2.50.1-tg.1",
+		"@tg-svelte/kit": "^2.50.1-tg.1",
+		"@sveltejs/vite-plugin-svelte": "^6.0.0",
+		"@vitejs/plugin-legacy": "^6.0.0",
+		"prettier": "^3.0.0",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
 		"terser": "^5.0.0",
-		"vite": "catalog:"
-	},
-	"overrides": {
-		"@tg-svelte/kit": "file:../../packages/kit"
-	},
-	"pnpm": {}
+		"vite": "^6.0.0"
+	}
 }
