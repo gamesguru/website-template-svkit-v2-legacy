@@ -19,7 +19,7 @@ Start the development server:
 npm run dev
 ```
 
-*Note: The development server uses Vite's modern ESM serving and does NOT emulate legacy browsers. To test legacy support, you must build and preview.*
+_Note: The development server uses Vite's modern ESM serving and does NOT emulate legacy browsers. To test legacy support, you must build and preview._
 
 ## Building (Legacy Support)
 
@@ -30,6 +30,7 @@ npm run build
 ```
 
 This command will:
+
 1.  Build the server-side code.
 2.  Build the client-side code (Modern).
 3.  Generate potential legacy chunks and polyfills via `@vitejs/plugin-legacy`.

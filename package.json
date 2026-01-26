@@ -15,6 +15,7 @@
 		"prepare": "svelte-kit sync",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"format": "prettier --write .",
 		"test": "playwright test"
 	},
 	"devDependencies": {
@@ -23,6 +24,7 @@
 		"@tg-svelte/kit": "npm:@tg-svelte/kit@^2.50.1-tg.1",
 		"@sveltejs/vite-plugin-svelte": "catalog:",
 		"@vitejs/plugin-legacy": "catalog:",
+		"prettier": "catalog:",
 		"svelte": "catalog:",
 		"svelte-check": "catalog:",
 		"terser": "^5.0.0",
@@ -31,6 +33,5 @@
 	"overrides": {
 		"@tg-svelte/kit": "file:../../packages/kit"
 	},
-	"pnpm": {
-	}
+	"pnpm": {}
 }
