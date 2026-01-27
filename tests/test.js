@@ -18,10 +18,10 @@ test.describe('Home Page', () => {
 		/** @type {string[]} */
 		const errors = [];
 		page.on('pageerror', (error) => errors.push(error.message));
-		
+
 		await page.goto('/');
 		await page.waitForLoadState('networkidle');
-		
+
 		expect(errors).toHaveLength(0);
 	});
 });
@@ -40,13 +40,13 @@ test.describe('Legacy Browser Support', () => {
 		// Create context with JS disabled to test SSR/prerendered fallback
 		const context = await browser.newContext({ javaScriptEnabled: false });
 		const page = await context.newPage();
-		
+
 		await page.goto('/');
-		
+
 		// Content should still be visible via SSR/prerender
 		await expect(page.locator('h1')).toBeVisible();
 		await expect(page.locator('h1')).toHaveText('Welcome to SvelteKit');
-		
+
 		await context.close();
 	});
 });

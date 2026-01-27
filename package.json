@@ -10,11 +10,12 @@
 	],
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "svelte-kit sync && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"test": "playwright test"
 	},
@@ -22,6 +23,7 @@
 		"@playwright/test": "^1.40.0",
 		"@tg-svelte/adapter-static": "^2.50.1-tg.1",
 		"@tg-svelte/kit": "^2.50.1-tg.1",
+		"@types/node": "^20.0.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@vitejs/plugin-legacy": "^6.0.0",
 		"prettier": "^3.0.0",
