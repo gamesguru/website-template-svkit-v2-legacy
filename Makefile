@@ -10,8 +10,9 @@ lint:	##@ Run linter
 	pnpm run check
 	pnpm run lint
 
-# .PHONY: test
-# test: # TODO: this
+.PHONY: test
+test:	##@ Run tests
+	pnpm run test
 
 .PHONY: format
 format:	##@ Format code
